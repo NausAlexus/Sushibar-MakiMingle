@@ -1,0 +1,1276 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    background-color: #ffffff;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+    body {
+        font-size: 16px;
+    }
+    .navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header {
+        padding: 35px 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(255, 255, 255);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(255, 255, 255);
+    background-color: transparent;
+}
+.header {
+    padding: 16px 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    transition: top 0.3s;
+    z-index: 1000;
+    border-bottom: 2px solid #d20000;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    max-width: 1920px;
+    margin: 0 auto;
+
+}
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header-link, .footer-link {
+    text-decoration: none;
+    color: #f86cc5;
+    font-weight: 900;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.nav-item {
+    margin-left: 20px;
+}
+.nav-link {
+    font-weight: 100;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.name-home-page {
+    width: 100%;
+    height: 110px;
+    background-color: #ffd8fe;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.name-home-page h1 {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .name-home-page {
+        height: 130px;
+        font-size: 14px;
+    }
+}
+
+.promo-section {
+    background-image: url('../img/main-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.promo-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.promo-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.promo-content h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.menu-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d20000;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .promo-content h2 {
+        font-size: 1.8em;
+    }
+
+    .menu-button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-content h2 {
+        font-size: 1.5em;
+    }
+}
+
+.new-arrivals {
+    padding: 20px;
+    text-align: left;
+}
+
+.new-arrivals-title {
+    font-size: 1em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+    font-weight: 100;
+    text-decoration: underline;
+}
+
+.new-arrivals-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.new-arrivals-slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    justify-content: flex-start;
+}
+
+.new-arrivals-card {
+    background-color: #8d3b3b;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(25% - 20px);
+    min-width: 200px;
+}
+
+.new-arrivals-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.new-arrivals-card h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.new-arrivals-card p {
+    color: #000000;
+}
+
+.order-btn {
+    margin-top: 10px;
+    padding: 4px 25px;
+    background-color: #d20000;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.new-arrivals-prev, .new-arrivals-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.new-arrivals-prev {
+    left: 10px;
+}
+
+.new-arrivals-next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .new-arrivals-card {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .new-arrivals-card {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
+
+.try-sushi {
+    padding: 20px;
+    text-align: left;
+}
+
+.try-sushi-title {
+    font-size: 1em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+    font-weight: 100;
+    text-decoration: underline;
+}
+
+.try-sushi-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.try-sushi-slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    justify-content: flex-start;
+}
+
+.try-sushi-card {
+    background-color: #8d3b3b;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(25% - 20px);
+    min-width: 200px;
+}
+
+.try-sushi-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.try-sushi-card h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.try-sushi-card p {
+    color: #000000;
+}
+
+.order-btn {
+    margin-top: 10px;
+    padding: 4px 25px;
+    background-color: #d20000;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.try-sushi-prev, .try-sushi-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.try-sushi-prev {
+    left: 10px;
+}
+
+.try-sushi-next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .try-sushi-card {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .try-sushi-card {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
+
+.info-section {
+    background-color: #cacaca;
+    padding: 20px 0;
+}
+
+.info-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+    font-size: 1.2em;
+}
+
+.info-item i {
+    margin-right: 10px;
+    color: #d20000;
+}
+
+.info-item span { 
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item {
+        margin: 5px 0;
+        font-size: 1em;
+    }
+}
+
+.why-choose-us {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.facts-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.facts-list li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #555;
+}
+
+.sushi-link {
+    color: #d20000;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    transition: border-bottom 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 1.5em;
+    }
+    
+    .facts-list li {
+        font-size: 1em;
+    }
+}
+
+.review {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.review h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.review p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.review-slider {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.review-item {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.review-item img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.review-item h3 {
+    font-size: 1.5em;
+    margin: 5px 0;
+    color: black;
+}
+
+.review-item p {
+    font-size: 1em;
+    color: gray;
+}
+
+.review-item blockquote {
+    font-style: italic;
+    margin-top: 10px;
+    color: #555;
+}
+
+.review-item:first-child {
+    display: flex;
+}
+
+.form-background {
+    background-color: #cacaca;
+    padding: 50px 0;
+}
+
+.form {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgb(0, 0, 0);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.heading-form {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #ffffff;
+    font-weight: 100;
+    border-bottom: 1px solid white;
+}
+
+.box {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #d20000;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+    font-size: 1em;
+}
+
+.box:focus {
+    border-color: #d20000;
+    box-shadow: 0 0 5px #d20000;
+}
+
+.form textarea {
+    resize: none;
+    height: 120px;
+    font-size: 1em;
+}
+
+.contact-form__checkbox {
+    margin-right: 10px;
+}
+
+.privacy-link {
+    color: #d20000;
+    text-decoration: none;
+}
+
+.btn {
+    margin-top: 10px;
+    background-color: #d20000;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .form {
+        padding: 20px;
+        margin: 30px;
+    }
+
+    .box {
+        padding: 10px;
+    }
+
+    .heading-form {
+        font-size: 1.5em;
+    }
+
+    .btn {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px) {
+    .form {
+        margin: 20px;
+    }
+
+    .box {
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        font-size: 0.8em;
+    }
+}
+
+.footer {
+    background-color: black;
+    padding: 10px 0;
+    border-top: 2px solid #d20000;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-info {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 100;
+    font-size: 0.8em;
+}
+.contact-footer {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 3px 0;
+    transition: color 0.3s ease;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 3px 0;
+    font-weight: 100;
+    font-size: 0.8em;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom {
+    text-align: center;
+    width: 100%;
+    margin-top: 0px;
+    font-weight: 100;
+    font-size: 0.8em;
+}
+
+.footer-info i {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info, .footer-links {
+        text-align: center;
+    }
+}
+
+.privacy-policy {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.privacy-policy__title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #d20000;
+}
+
+.privacy-policy__section-title {
+    font-size: 1.8em;
+    margin-top: 20px;
+    color: #d20000;
+}
+
+.privacy-policy__section-content {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: black;
+}
+
+.privacy-policy__contact-email {
+    color: #d20000;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .privacy-policy {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .privacy-policy {
+        padding: 15px;
+    }
+
+    .privacy-policy__title {
+        font-size: 2em;
+    }
+
+    .privacy-policy__section-title {
+        font-size: 1.5em;
+    }
+
+    .privacy-policy__section-content {
+        font-size: 1em;
+    }
+}
+
+.term-of-use {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.term-of-use__title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #d20000;
+}
+
+.term-of-use__section-title {
+    font-size: 1.8em;
+    margin-top: 20px;
+    color: #d20000;
+}
+
+.term-of-use__section-content {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: black;
+}
+
+.term-of-use__contact-email {
+    color: #d20000;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .term-of-use {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .term-of-use {
+        padding: 15px;
+    }
+
+    .term-of-use__title {
+        font-size: 2em;
+    }
+
+    .term-of-use__section-title {
+        font-size: 1.5em;
+    }
+
+    .term-of-use__section-content {
+        font-size: 1em;
+    }
+}
+
+.menu-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.menu-header {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.menu-description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.menu-card {
+    position: relative;
+    display: block;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    transition: background-color 0.3s;
+}
+
+@media (max-width: 768px) {
+    .menu-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .menu-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.menu-item-container {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.category-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.category-description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sushi-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.sushi-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.sushi-card:hover {
+    transform: translateY(-5px);
+}
+
+.sushi-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+.sushi-name {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 15px;
+}
+
+.sushi-ingredients, .sushi-price {
+    font-size: 1em;
+    color: #666;
+    margin: 5px 15px;
+}
+
+.sushi-price {
+    color: #d20000;
+}
+
+.order-button {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    background-color: #d20000;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .sushi-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .sushi-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.vacancies-section {
+    padding: 20px;
+    border-radius: 8px;
+}
+.vacancies-section h2 {
+    color: #333;
+}
+
+.vacancies-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.vacancies-list {
+    list-style: none;
+    padding: 0;
+    color: #666;
+}
+
+.vacancy-item {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.vacancy-details {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    border-left: 3px solid #d20000;
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.vacancy-details p {
+    margin-top: 0px;
+
+}
+
+.vacancy-details.show {
+    max-height: 200px;
+    opacity: 1;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    .vacancies-description {
+        font-size: 1em;
+    }
+
+    .vacancy-item {
+        font-size: 0.9em;
+    }
+}
+
+.about-wrapper {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.team-description {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0 20px;
+    color: #333;
+}
+
+.founder-card {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.founder-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.founder-details {
+    flex: 1;
+}
+
+.founder-name {
+    font-size: 1.5em;
+    margin: 0;
+    color: #d20000;
+}
+
+.founder-title {
+    font-style: italic;
+    color: black;
+}
+
+.founder-bio {
+    margin-top: 10px;
+    color: #666;
+}
+
+.kitchen-heart {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 1.2em;
+}
+
+.kitchen-description {
+    color: #333;
+}
+
+.kitchen-sections {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.kitchen-card {
+    width: 30%;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.kitchen-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.kitchen-title {
+    font-weight: bold;
+    margin-top: 10px;
+    color: black;
+}
+
+.kitchen-info {
+    margin-top: 5px;
+    color: #666;
+}
+
+.masters-description {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 30px 0;
+    color: #333;
+}
+
+.chefs-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.chef-card {
+    width: 30%;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.chef-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.chef-name {
+    font-weight: bold;
+    margin: 0;
+    color: #d20000;
+}
+
+.chef-experience {
+    margin-top: 5px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .founder-card, .kitchen-card, .chef-card {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .kitchen-sections, .chefs-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.welcome-section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.welcome-description {
+    margin-bottom: 20px;
+}
+
+.welcome-description h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.welcome-description p {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.welcome-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.sushi-bar-image {
+    flex: 1;
+    max-width: 300px;
+    margin: 20px;
+}
+
+.sushi-bar-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.map-container {
+    flex: 1;
+    max-width: 600px;
+    margin: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+}
+
+@media (max-width: 768px) {
+    .welcome-content {
+        flex-direction: column;
+    }
+
+    .sushi-bar-image, .map-container {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .welcome-description p {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 1025px) {
+    .nav-link:hover {
+        color: #d20000;
+    }
+    .header-link:hover, .footer-link:hover {
+        color: rgb(138, 10, 74);
+    }
+    .menu-button:hover {
+        background-color: #000000;
+        color: #d20000;
+    }
+    .order-btn:hover {
+        background-color: #000000;
+        color: #d20000;
+    }
+    .sushi-link:hover {
+        border-bottom: 2px solid #d20000;
+    }
+    .btn:hover {
+        background-color: #660808;
+    }
+    .contact-footer:hover, .footer-links a:hover {
+        color: #d20000;
+    }
+    .privacy-policy__contact-email:hover {
+        border-bottom: 2px solid #d20000;
+    }
+    .term-of-use__contact-email:hover {
+        border-bottom: 2px solid #d20000;
+    }
+    .menu-card:hover .card-overlay {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .order-button:hover {
+        background-color: #000000;
+        color: #d20000;
+    }
+    .vacancy-item:hover {
+        background-color: #eaeaea;
+    }
+}
